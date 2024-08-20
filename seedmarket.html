@@ -1,0 +1,458 @@
+<html>
+<head>
+
+<h1 style="background-color:#c4e5f5;" align="center" height="5%"width="90%">SEED EXCHANGE MARKET</h1>
+
+</head>
+<br>
+<br>
+<style>
+.carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+</style>
+<body>
+<div>
+  <div class="carousel">
+    <ul class="slides">
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://www.garden.eco/wp-content/uploads/2017/11/plant-pumpkin-seeds.jpg.jpg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-3" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-2" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://foodgardening.mequoda.com/wp-content/uploads/2021/05/Sowing-wheat-seeds.jpg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-1" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-3" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://www.gardeningknowhow.com/wp-content/uploads/2020/07/seed-planting.jpg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-2" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-1" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+      </div>
+    </ul>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<style>
+ :root {
+  --red: #ef233c;
+  --darkred: #c00424;
+  --platinum: #e5e5e5;
+  --black: #2b2d42;
+  --white: #fff;
+  --thumb: #edf2f4;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 16px / 24px "Rubik", sans-serif;
+  color: var(--black);
+  background: var(--platinum);
+  margin: 50px 0;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 1em;
+}
+
+.cards {
+  display: flex;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card:hover {
+  color: var(--white);
+  background: var(--red);
+}
+
+.card .card-title {
+  font-size: 20px;
+}
+
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+
+.cards::-webkit-scrollbar {
+  height: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  z-index: 1;
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+</style>
+<div class="container">
+  <h1 align="center">SEED SHOP IS DOWN HERE!!!!!</h1><br>
+  <ul class="cards">
+    <li class="card">
+      <div>
+        <h3 class="card-title" align="center">Paddy seed</h3>
+        <div class="card-content">
+		 <img src="https://araliyarice.com/wp-content/uploads/2017/12/good-seeds.jpg" alt="Denim Jeans" style="width:120%">
+        <br><br>  <p>Paddy is an essential food crop for billions of people in India.The seed germination process is a key phase of the plant life cycle. Quality seed is important to increase production.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link"><button>Buy now</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Wheat seed</h3>
+        <div class="card-content">
+		 <img src="https://i0.wp.com/youmeandtrends.com/wp-content/uploads/2017/01/Wheat-producing-states-of-India-Most-wheat-producing-states-in-India.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>Wheat, any of several species of cereal grasses of the genus Triticum and their edible grains.It is used to make bread, pasta, cake, crackers, cookies, pastries, flour, and many other foodstuffs.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link"><button>Buy now</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Corn seed</h3>
+        <div class="card-content">
+		 <img src="https://tse4.mm.bing.net/th?id=OIP.GJXOmgAMA4U4_fKSDnWETQHaE7&pid=Api&P=0&h=180" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>Corn is used as livestock feed, as human food, as biofuel, and as raw material in industry. Corn was first domesticated by native peoples in southern Mexico about 10,000 years ago.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link"><button>Buy now</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Peanut seed</h3>
+        <div class="card-content">
+		 <img src="https://tse4.mm.bing.net/th?id=OIP.q3dbj3AW4za6XhwLGnomUQHaFj&pid=Api&P=0&h=180" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>The peanut is used extensively as feed for livestock in some places; the tops of the plants, after the pods are removed,although the entire plant may be so used.</p>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link"><button>Buy now</button></a>
+      </div>
+    </li>
+	<br>
+	<br>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Sorghum seed</h3>
+        <div class="card-content">
+		 <img src="https://cdn9.dissolve.com/p/D869_14_307/D869_14_307_1200.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>Grain sorghum is a grass that’s used to feed livestock and is made into flour for the food we eat. Red, orange, and bronze sorghum is versatile enough to be used for everything from animal feed to fuel.</p>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link"><button>Buy now</button></a>
+      </div>
+    </li>
+    <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Cotton seed</h3>
+          <div class="card-content">
+           <img src="http://cottonleads.org/wp-content/uploads/2018/01/Energy-Cotton-Agriculture-Seed-Image.jpg" alt="Denim Jeans" style="width:120%">
+          <br> <br> <p>Look for cotton seeds that are pure, viable, disease-free, and approved by a reputable agency.</p>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link"><button>Buy now</button></a>
+        </div>
+      </li>
+      <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Tomato seed</h3>
+          <div class="card-content">
+           <img src="https://www.urbanorganicgardener.com/wp-content/uploads/2020/10/Untitled-design-2.jpg" alt="Denim Jeans" style="width:120%">
+          <br> <br> <p>Tomatoes are used in the preparations of a variety of soups, and salads. Many industrial products like tomato sauce and chutneys are made from them.</p>
+          </div>
+        </div>
+        
+        <div class="card-link-wrapper">
+          <a href="" class="card-link"><button>Buy now</button></a>
+        </div>
+      </li>
+      <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Chilli seed</h3>
+          <div class="card-content">
+           <img src="https://tse2.mm.bing.net/th?id=OIP.6Z9XgiKqVztRXBHzGmxBFQHaE7&pid=Api&P=0&h=180" alt="Denim Jeans" style="width:120%">
+          <br> <br> <p>A chilli seed is the reproductive part of a chilli plant, which can be planted to grow a new chilli plant. Chilli seeds are typically found inside the fruit of the chilli plant, which is also known as the chilli pepper</p>
+          </div>
+        </div>
+        <br>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link"><button>Buy now</button></a>
+        </div>
+      </li>
+
+	
+</body>
+</html>
